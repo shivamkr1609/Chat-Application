@@ -1,0 +1,24 @@
+<Chat>:
+    orientation: 'vertical'
+
+    TextInput:
+        id: ChatBox
+        readonly: True  # Display-only chat area
+        multiline: True  # Allows multiple lines
+
+    BoxLayout:
+        height: 90
+        orientation: 'horizontal'
+        padding: 0
+        size_hint: (1, None)
+
+        TextInput:
+            id: EntryBox
+            multiline: False  # Single-line input for messages
+
+        Button:
+            id: SendButton
+            text: 'Send'
+            size_hint: (0.3, 1)
+            on_press: root.clickAction()
+
